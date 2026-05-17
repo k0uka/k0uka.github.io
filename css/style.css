@@ -490,7 +490,6 @@ span{
 .timeline-content h3{
         overflow-wrap: break-word;
     word-break: break-word;
-    hyphens: auto;
     font-size: 20px;
     color: var(--text-color);
     margin: 0 0 10px;
@@ -499,7 +498,6 @@ span{
 .timeline-content p{
         overflow-wrap: break-word;
     word-break: break-word;
-    hyphens: auto;
     color: var(--text-color);
     font-size: 16px;
     font-weight: 300;
