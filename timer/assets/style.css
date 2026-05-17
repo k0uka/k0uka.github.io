@@ -1,0 +1,190 @@
+/* body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url("https://i.pinimg.com/736x/d8/69/6a/d8696aed727b17feee2fef459a34218c.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.timer {
+
+    font-size: 3em;
+    margin-top: 240px;
+    padding: 20px;
+    background-color:bisque;
+    border-radius: 8px;
+    display: inline-block;
+    width: 200px;
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+}
+
+.controls button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.start {
+    background-color: #48CFCB;
+    box-shadow: 0 0 50px #48CFCB;
+    color: white;
+}
+
+.pause {
+    background-color: #FF2929;
+    box-shadow: 0 0 50px #FF2929;
+    color: white;
+}
+
+.reset {
+    background-color: #7776B3;
+    box-shadow: 0 0 50px #7776B3;
+    color: white;
+}
+
+.resume{
+background-color: #eb8b24;
+box-shadow: 0 0 50px #eb8b24;
+color: white;
+}
+
+input{
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #A27B5C;
+}
+
+.start:disabled{
+    background-color: #48cfcb4d;
+}
+
+.pause:disabled{
+    background-color: #ff292963;
+}
+
+.resume:disabled{
+    background-color: #eb8b2454;
+}
+
+.reset:disabled{
+    background-color: #7776b351;
+}
+ */
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url("https://i.pinimg.com/736x/d8/69/6a/d8696aed727b17feee2fef459a34218c.jpg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center; /* Centrage horizontal */
+    align-items: center;     /* Centrage vertical */
+}
+
+.navbar{
+    background: url("https://i.pinimg.com/736x/d8/69/6a/d8696aed727b17feee2fef459a34218c.jpg");
+    background-size: cover;
+}
+
+/* Conteneur principal centré */
+.navbar img{
+    padding-top:15px ;
+}
+
+.section-container {
+    position: absolute;
+    top: 50%;  /* Positionne l'élément au centre de la fenêtre */
+    left: 50%; /* Positionne l'élément au centre horizontalement */
+    transform: translate(-50%, -50%); /* Décale de moitié la taille de l'élément pour un centrage exact */
+    text-align: center;
+    padding: 20px;
+    width: auto;
+    height: auto;
+    z-index: 0; /* Met la section derrière la nav */
+}
+
+/* Timer */
+.timer {
+    font-size: 3em;
+    padding: 20px;
+    background-color: bisque;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center; /* Centrage du texte dans le timer */
+    margin-bottom: 20px; /* Espacement entre le timer et les boutons */
+    box-shadow: 0 0 50px rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Centrage horizontal du timer dans son parent */
+}
+
+/* Boutons */
+.controls button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+}
+
+.start {
+    background-color: #48CFCB;
+    box-shadow: 0 0 50px #48CFCB;
+    color: white;
+}
+
+.pause {
+    background-color: #FF2929;
+    box-shadow: 0 0 50px #FF2929;
+    color: white;
+}
+
+.reset {
+    background-color: #7776B3;
+    box-shadow: 0 0 50px #7776B3;
+    color: white;
+}
+
+.resume{
+    background-color: #eb8b24;
+    box-shadow: 0 0 50px #eb8b24;
+    color: white;
+}
+
+input {
+    padding: 10px;
+    font-size: 1.2rem;
+    width: 100px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #A27B5C;
+}
+
+/* Désactivation des boutons */
+.start:disabled {
+    background-color: #48cfcb4d;
+}
+
+.pause:disabled {
+    background-color: #ff292963;
+}
+
+.resume:disabled {
+    background-color: #eb8b246b;
+}
+
+.reset:disabled {
+    background-color: #7776b383;
+}
