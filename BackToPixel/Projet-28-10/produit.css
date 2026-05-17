@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  background-color: #ea4d4dd1;
+  font-family: "Press Start 2P", cursive; /* Police rétro */
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre sous le menu */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li {
+  position: relative;
+  margin: 0 15px;
+  padding-top: 40px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 15px;
+  padding-left: 35px; /* Espace pour la flèche */
+  display: block;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu ul li a::before {
+  content: "➤"; /* Triangle ou flèche */
+  position: absolute;
+  left: 10px; /* Ajuste pour positionner la flèche */
+  top: 50%; /* Aligne verticalement la flèche au centre du texte */
+  transform: translateY(-50%); /* Centre la flèche verticalement */
+  opacity: 0; /* Invisible par défaut */
+  transition: opacity 0.3s; /* Pour une transition douce */
+}
+
+.menu ul li:hover > a::before {
+  opacity: 1; /* Montre la flèche au survol */
+}
+
+.menu ul li a:hover {
+  color: #d6e10a;
+  background-color: #101d39;
+  border-radius: 5px;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Couleur LED blanche */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  transform: scaleX(1); /* La ligne s'étend sous le texte */
+}
+
+.submenu {
+  position: relative; /* Nécessaire pour le sous-menu */
+}
+
+.submenu ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #ea4d4d66;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 999; /* Assure que le sous-menu est au-dessus des autres éléments */
+}
+
+.submenu:hover ul {
+  display: block; /* Affiche le sous-menu au survol */
+}
+
+.submenu ul li {
+  margin: 5px 0;
+}
+
+.submenu ul li a {
+  padding: 10px 20px; /* Espace pour le sous-menu */
+  position: relative; /* Nécessaire pour positionner la flèche */
+  padding-left: 30px; /* Espace pour la flèche dans le sous-menu */
+}
+
+.submenu ul li a::before {
+  content: "➤"; /* Triangle ou flèche */
+  position: absolute;
+  left: 10px; /* Positionne la flèche à gauche du texte */
+  top: 50%; /* Aligne verticalement la flèche au centre du texte */
+  transform: translateY(
+    -50%
+  ); /* Ajuste la flèche pour qu'elle soit bien centrée verticalement */
+  opacity: 0; /* Invisible par défaut */
+  transition: opacity 0.3s; /* Pour une transition douce */
+}
+
+.submenu ul li:hover > a::before {
+  opacity: 1; /* Montre la flèche au survol */
+}
+
+.submenu ul li a:hover {
+  color: #d6e10a;
+  background-color: #101d39;
+  border-radius: 3px;
+}
+
+.menu .logo {
+  height: 100px;
+  margin-right: auto;
+}
+
+.teste{
+  background-color: #07195a;
+  padding-bottom: 90px;
+}
+
+/* Main Wrap */
+
+.main-wrap{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #07195a;
+    padding-top: 200px;
+    padding-bottom: 90px;
+}
+.main-wrap .product{
+    width: 90%;
+    max-width: 750px;
+    display: flex;
+}
+.main-wrap .product .image-gallery{
+    max-width: 750px;
+    flex-basis: 47%;
+    background: #ea4d4d;
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+    position: relative;
+}
+
+.main-wrap .product .image-gallery img{
+    width: 100%;
+    padding-top: 200px;
+}
+
+/* PRODUCT DETAILS */
+
+.main-wrap .product .product-details{
+    flex-basis: 53%;
+    background: #fff;
+    box-shadow: -10px 5px 10px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px 40px 40px;
+    font-family: roboto, cursive;
+}
+.main-wrap .product .product-details .details{
+    margin-bottom: 20px;
+}
+.main-wrap .product .product-details .details h2{
+    font-family: "Press Start 2P", cursive;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 35px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #011627;
+}
+.main-wrap .product .product-details .details h3{
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 35px;
+    margin-bottom: 10px;
+    color: red;
+}
+
+.main-wrap .product .product-details .Accesoires-details h2 {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.main-wrap .product .product-details .Accesoires-details ul {
+    font-size: 15px;
+    font-weight:500;
+    line-height: 25px;
+    padding-left: 20px;
+
+}
+.main-wrap .product .product-details .details p{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 25px;
+    color: black;
+}
+.main-wrap .product .product-details .Accesoires-details li {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 0px;
+    padding-left: 5px;
+}
+/* PRODUCT DETAILS */
+
+/* JEUX POPULAIRES */
+.main-wrap .product .product-details .Jeux-populaires h3{
+    font-size: 20px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.main-wrap .product .product-details .Jeux-populaires ul{
+    font-size: 15px;
+    font-weight:500;
+    line-height: 25px;
+    padding-left: 20px;
+    color:black;
+}
+.main-wrap .product .product-details .Jeux-populaires ul li a {
+    color: blue;
+}
+
+/* JEUX POPULAIRES FIN */
+
+/* YOUTUBE VIDEO */
+
+section.youtube-vidéo-quizz{
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Centre la video ytb au millieu */
+}
+
+.youtube-vidéo-quizz{
+    display: flex;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.video-container h2 {
+    padding-right: 10px;
+    padding-bottom: 20px;
+    font-family: "Press Start 2P", cursive;
+}
+
+.video-container iframe {
+  padding-left: 15%;
+
+}
+/* Youtube end */
+
+/* Quiz */
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #d6e10a;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+section.quiz-container-NES{
+    background-color:#07195a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.quiz-container h2{
+    font-size: 20px;
+    font-family: "Press Start 2P", cursive;
+    cursor: pointer;
+    color:#ffffff
+}
+.quiz-container{
+    font-family: "roboto", cursive;
+    width: 600px;
+    height: 300px;
+    margin-bottom: 160px;
+    display: flex;
+    background: #ea4d4d;
+    padding: 30px;
+    box-shadow: 0 4px 10px white;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.quiz-container h2 {
+    text-align: center;
+}
+
+.video-container h2 {
+    text-align: center;
+}
+
+button:hover {
+    background-color: #07195a;
+}
+
+.quiz-form {
+   padding-left: 40%;
+   padding-top: 20px;
+}
+/*Quizz end*/
+
+/***************************************************FOOTER******************************************************************/
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: auto;
+    list-style-type: none;
+    margin-top: -50px;
+  }
+  
+  .footer-container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .mentions,
+  .contact,
+  .social-media {
+    margin: 10px;
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .mentions {
+    position: relative;
+    text-align: center;
+  }
+  
+  .contact27 {
+    text-align: center;
+  }
+  
+  .social-media {
+    text-align: center;
+  }
+  .social-media .icons {
+    display: flex;
+    gap: 15px; /* Espace entre les icônes */
+    justify-content: center; /* Centre les icônes horizontalement */
+  }
+  
+  .social-media .icons a {
+    color: #ffffff;
+    font-size: 24px; /* Ajuste la taille des icônes */
+    transition: color 0.3s;
+    text-decoration: none;
+  }
+  
+  .social-media .icons a:hover {
+    color: #dd4a48; /* Couleur de survol */
+  }
+  
+  /**************************************FIN FOOTERR ********************************************/
+  

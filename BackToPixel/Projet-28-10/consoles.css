@@ -1,0 +1,848 @@
+* {
+  box-sizing: border-box;
+}
+main {
+  font-family: roboto, cursive; 
+}
+div img {
+  width: 400px;
+  height: 300px;
+  border: 2px solid #101d39;
+  border-radius: 5px;
+  box-shadow: 4px 7px 0px #d6e10a;
+  cursor: pointer;
+  margin: 20px;
+  transition: 400ms;
+  background-color: #101d39;
+}
+
+.teste {
+  color: #07195a;
+  background-color: #07195a;
+  padding-top: 0px;
+  padding-bottom: 100px;
+}
+
+/* Categories 1 */
+.card .categories1 {
+  background-color: #101d39;
+  border: 2px solid #101d39;
+  border-radius: 5px;
+  padding: 20px; /* Espacement interne */
+  box-shadow: 4px 7px 0px #d6e10a; /* L'ombre pour la boite */
+  margin: 20px;
+}
+
+.categories1 {
+  display: flex; /* permet de mettre l'image et la liste côte à côte */
+  background-color: #101d39;
+  border: 2px solid #101d39;
+  margin: 20px; /* l'espacement qui y'a autour du carré */
+}
+
+.categories1 img {
+  width: 400px;
+  height: 300px;
+  border: 2px solid #101d39;
+  border-radius: 5px;
+  cursor: pointer; /* change le curseur quand tu passe sur l'image */
+  margin-right: 20px; /* Espacement entre l'image et la liste */
+}
+
+.image-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.image-list li {
+  padding-left: 25px;
+  font-size: 18px;
+  color: white;
+}
+
+.categories1 a {
+  padding: 155px; /*permet de bien ajuster les image au millieu*/
+}
+
+.title {
+  font-size: 20px;
+  font-family: "Press Start 2P", cursive; /* la police rétro*/
+  padding-left: 685px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+/*Fin Categories 1*/
+
+/* Categories 2 */
+
+.categories2 a {
+  padding: 45px;
+}
+.card .categories2 {
+  background-color: #101d39;
+  border: 2px solid #101d39;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 4px 7px 0px #d6e10a;
+  margin: 20px;
+}
+
+.categories2 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #101d39;
+  border: 2px solid #101d39;
+  padding: 20px;
+  margin: 20px;
+}
+
+.categories2 img {
+  width: 400px;
+  height: 300px;
+  border: 2px solid #101d39;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 220px;
+}
+/* fin categories2 */
+
+/* categories 3 */
+.categories3 a {
+  padding: 47px;
+}
+.card .categories3 {
+  background-color: #101d39;
+  border: 2px solid #101d39;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 4px 7px 0px #d6e10a;
+  margin: 20px;
+}
+
+.categories3 {
+  display: flex;
+  align-items: flex-start;
+  background-color: #101d39;
+  border: 2px solid #101d39;
+  padding: 20px;
+  margin: 20px;
+}
+
+.categories3 img {
+  width: 400px;
+  height: 300px;
+  border: 2px solid #101d39;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 225px;
+}
+/* fin categories 3 */
+
+/***************************************************BARRE MENU******************************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #07195a;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+
+.menu {
+  background-color: #ea4d4dd1;
+  font-family: "Press Start 2P", cursive; /* Police rétro */
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre sous le menu */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li {
+  position: relative;
+  margin: 0 15px;
+  padding-top: 40px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 15px;
+  padding-left: 35px; /* Espace pour la flèche */
+  display: block;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu ul li a::before {
+  content: "➤"; /* Triangle ou flèche */
+  position: absolute;
+  left: 10px; /* Ajuste pour positionner la flèche */
+  top: 50%; /* Aligne verticalement la flèche au centre du texte */
+  transform: translateY(-50%); /* Centre la flèche verticalement */
+  opacity: 0; /* Invisible par défaut */
+  transition: opacity 0.3s; /* Pour une transition douce */
+}
+
+.menu ul li:hover > a::before {
+  opacity: 1; /* Montre la flèche au survol */
+}
+
+.menu ul li a:hover {
+  color: #d6e10a;
+  background-color: #101d39;
+  border-radius: 5px;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Couleur LED blanche */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  transform: scaleX(1); /* La ligne s'étend sous le texte */
+}
+
+.submenu {
+  position: relative; /* Nécessaire pour le sous-menu */
+}
+
+.submenu ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #ea4d4d66;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 999; /* Assure que le sous-menu est au-dessus des autres éléments */
+}
+
+.submenu:hover ul {
+  display: block; /* Affiche le sous-menu au survol */
+}
+
+.submenu ul li {
+  margin: 5px 0;
+}
+
+.submenu ul li a {
+  padding: 10px 20px; /* Espace pour le sous-menu */
+  position: relative; /* Nécessaire pour positionner la flèche */
+  padding-left: 30px; /* Espace pour la flèche dans le sous-menu */
+}
+
+.submenu ul li a::before {
+  content: "➤"; /* Triangle ou flèche */
+  position: absolute;
+  left: 10px; /* Positionne la flèche à gauche du texte */
+  top: 50%; /* Aligne verticalement la flèche au centre du texte */
+  transform: translateY(
+    -50%
+  ); /* Ajuste la flèche pour qu'elle soit bien centrée verticalement */
+  opacity: 0; /* Invisible par défaut */
+  transition: opacity 0.3s; /* Pour une transition douce */
+}
+
+.submenu ul li:hover > a::before {
+  opacity: 1; /* Montre la flèche au survol */
+}
+
+.submenu ul li a:hover {
+  color: #d6e10a;
+  background-color: #101d39;
+  border-radius: 3px;
+}
+
+.menu .logo {
+  height: 100px; /* Ajuste la hauteur selon tes besoins */
+  margin-right: auto;
+}
+
+/* Corps principal, étend la zone de contenu */
+main {
+  flex: 1;
+  background-color: #07195a;
+  color: #fff;
+  margin-bottom: 0px;
+  margin-top: 25px;
+  padding-bottom: 0%;
+}
+
+.slogan {
+  position: relative;
+  font-size: 2.5em;
+  font-family: "Press Start 2P", cursive;
+  z-index: 1;
+  margin-top: 100px;
+}
+
+/* Présentation */
+.presentation {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.box-3d {
+  background-color: #ea4d4d;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 0px #101d39, 10px 10px 0px #d6e10a;
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  text-align: center;
+  margin-top: 150px; /* Espace entre le slogan et la box */
+  z-index: 1;
+}
+
+.box-3d p {
+  margin-bottom: 10px;
+}
+
+.read-more {
+  background-color: #101d39;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Press Start 2P", cursive;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.read-more:hover {
+  background-color: #d6e10a;
+  color: #101d39;
+}
+
+/* Bannière avec effet parallaxe */
+.banner-image {
+  background-image: url("photos/index/fpic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 600px; /* Ajuste la hauteur pour intégrer la box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 200px;
+  padding-top: 200px;
+}
+
+.banner-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+/* Présentation */
+.presentation {
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+/* Catégories */
+.categories {
+  text-align: center;
+  margin: 50px 0;
+  font-family: "Press Start 2P", cursive;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #f8f8f8; /* Couleur de fond claire */
+  border: 2px solid #d3d3d3; /* Bordure gris clair */
+  border-radius: 8px; /* Coins arrondis */
+  padding: 20px;
+  width: 300px; /* Largeur fixe pour chaque carte */
+  margin: 10px; /* Marge autour des cartes */
+  transition: transform 0.3s; /* Animation au survol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  position: relative;
+  font-family: "Courier New", Courier, monospace; /* Police rétro */
+}
+
+.card h3 {
+  color: #333; /* Couleur du texte */
+  font-size: 1.2em; /* Taille du texte du titre */
+  margin-bottom: 0px; /* Marge en bas du titre */
+  text-align: center;
+}
+
+.card p {
+  color: #555; /* Couleur du texte du paragraphe */
+  margin-top: 20px;
+}
+
+.card-link {
+  display: inline-block;
+  background-color: #007bff; /* Couleur de fond du bouton */
+  color: white; /* Couleur du texte */
+  padding: 10px 15px; /* Espacement intérieur du bouton */
+  text-decoration: none; /* Pas de soulignement */
+  border-radius: 5px; /* Coins arrondis du bouton */
+  position: absolute;
+  top: 120px; /* Positionnement en bas de la carte */
+  left: 50%;
+  transform: translateX(-50%); /* Centrage du bouton */
+  transition: background-color 0.3s; /* Animation au survol */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Élévation de la carte au survol */
+}
+
+.card-link:hover {
+  background-color: #0056b3; /* Couleur du bouton au survol */
+}
+
+/* Produits populaires */
+.produits-populaires {
+  text-align: center;
+  margin-top: -200px;
+  text-align: center;
+  color: white;
+}
+
+.produits-populaires h2 {
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+}
+
+.podium {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.card1 {
+  background-color: #da5e5e; /* Couleur de fond rétro */
+  border: 2px solid #e3b04b; /* Bordure dorée */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre */
+  transition: transform 0.3s ease; /* Animation au survol */
+  width: 250px; /* Largeur standard */
+}
+
+.card1:hover {
+  transform: scale(1.05); /* Agrandir au survol */
+}
+
+.produit-image {
+  width: 100%; /* Prend toute la largeur de la carte */
+  border-radius: 8px; /* Coins arrondis de l'image */
+  margin-bottom: 10px; /* Espace entre l'image et le texte */
+}
+
+.card1 h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.card1 p {
+  margin-bottom: 15px;
+}
+
+/* Réseaux sociaux et horaires */
+.social-media a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.hours {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.parallax {
+  background-image: url("photos/index/fpic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 200px; /* Ajuste la hauteur pour intégrer la box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 200px;
+  padding-top: 20px;
+}
+
+.parallaxactu {
+  background-image: url("photos/index/fpic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 200px; /* Ajuste la hauteur pour intégrer la box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 200px;
+  padding-top: 20px;
+}
+
+.parallaxcont {
+  background-image: url("photos/index/fpic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 200px; /* Ajuste la hauteur pour intégrer la box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: -9px;
+}
+
+.parallaxfo {
+  background-image: url("photos/index/fpic.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 200px; /* Ajuste la hauteur pour intégrer la box */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*********************************Actualités*******************************************************************/
+
+.actualites {
+  width: 100%;
+  overflow: hidden;
+  background-color: #1e1e1e;
+  border: 3px solid #ff6b6b;
+  padding: 1px;
+  font-family: "Press Start 2P", cursive;
+  color: #ff6b6b;
+  text-align: center;
+  margin-top: -200px;
+}
+
+.actualites h2 {
+  padding-top: 20px;
+  text-align: center;
+  color: white;
+}
+
+.scroll-container {
+  white-space: nowrap;
+  overflow: hidden;
+  margin-top: -50px;
+}
+
+.scroll-content {
+  display: inline-block;
+  padding-left: 100%; /* démarre le texte en dehors de la vue */
+  animation: scroll-left 25s linear infinite;
+}
+
+.actu-card {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #2b2b2b;
+  border: 2px solid #ff6b6b;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* photos actu */
+
+.image-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-bottom: 0%;
+}
+
+.image-link {
+  width: 100px; /* Ajuste la taille selon tes besoins */
+  height: auto;
+  margin: 0 10px;
+  border: 2px solid #ff6b6b; /* Bordure rétro */
+  border-radius: 5px;
+}
+
+/*contact*/
+
+.contact {
+  padding: 0px 0;
+  background-color: #b86060;
+  text-align: center;
+  color: #ffffff;
+  margin-top: -500px;
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  color: #eeecf6;
+  font-family: "Press Start 2P", cursive;
+  margin-bottom: 20px;
+}
+
+.contact-block {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+  max-width: 800px;
+  margin: auto;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1 45%;
+  background: #c07777;
+  padding: 20px;
+  border-radius: 8px;
+  border: 3px solid #c10a0a;
+}
+
+.contact-form h3,
+.contact-info h3 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 1.2em;
+  color: #2b2b60;
+  margin-bottom: 15px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  color: #a22727;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 0.9em;
+  background: #222;
+  color: #ffffff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #ffcc00;
+}
+
+.submit-button {
+  background-color: #ffffff;
+  color: #333;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
+}
+
+.submit-button:hover {
+  background-color: #242851;
+  color: white;
+}
+
+.contact-info p {
+  font-size: 0.95em;
+  color: #dddddd;
+  margin: 8px 0;
+}
+
+.map iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(186, 16, 16, 0.4);
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 0.9em;
+  background: #222;
+  color: #ffffff;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #0707a4;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/***************************************************FOOTER******************************************************************/
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-top: auto;
+  list-style-type: none;
+  margin-top: -50px;
+}
+
+.footer-container {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.mentions,
+.contact,
+.social-media {
+  margin: 10px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.mentions {
+  position: relative;
+  text-align: center;
+}
+
+.contact27 {
+  text-align: center;
+}
+
+.social-media {
+  text-align: center;
+}
+.social-media .icons {
+  display: flex;
+  gap: 15px; /* Espace entre les icônes */
+  justify-content: center; /* Centre les icônes horizontalement */
+}
+
+.social-media .icons a {
+  color: #ffffff;
+  font-size: 24px; /* Ajuste la taille des icônes */
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.social-media .icons a:hover {
+  color: #dd4a48; /* Couleur de survol */
+}
+
+/**************************************FIN FOOTERR ********************************************/

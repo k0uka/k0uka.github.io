@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #07195a;
+  color: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  background-color: #ea4d4dd1;
+  font-family: "Press Start 2P", cursive; /* Police rétro */
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre sous le menu */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  white-space: nowrap;
+  padding-right: 15px;
+}
+
+.menu ul li {
+  position: relative;
+  margin: 0 15px;
+  padding-top: 40px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 15px;
+  padding-left: 35px; /* Espace pour la flèche */
+  display: block;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu ul li a::before {
+  content: "➤"; /* Triangle ou flèche */
+  position: absolute;
+  left: 10px; /* Ajuste pour positionner la flèche */
+  top: 50%; /* Aligne verticalement la flèche au centre du texte */
+  transform: translateY(-50%); /* Centre la flèche verticalement */
+  opacity: 0; /* Invisible par défaut */
+  transition: opacity 0.3s; /* Pour une transition douce */
+}
+
+.menu ul li:hover > a::before {
+  opacity: 1; /* Montre la flèche au survol */
+}
+
+.menu ul li a:hover {
+  color: #d6e10a;
+  background-color: #101d39;
+  border-radius: 5px;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Couleur LED blanche */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  transform: scaleX(1); /* La ligne s'étend sous le texte */
+}
+
+.submenu {
+  position: relative; /* Nécessaire pour le sous-menu */
+}
+
+.submenu ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #ea4d4dcf;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 999; /* Assure que le sous-menu est au-dessus des autres éléments */
+}
+
+.submenu:hover ul {
+  display: block; /* Affiche le sous-menu au survol */
+}
+
+.submenu ul li {
+  margin: 5px 0;
+}
+
+.submenu ul li a {
+  padding: 10px 20px; /* Espace pour le sous-menu */
+  position: relative; /* Nécessaire pour positionner la flèche */
+  padding-left: 30px; /* Espace pour la flèche dans le sous-menu */
+}
+
+.submenu ul li a::before {
+  content: "➤"; /* Triangle ou flèche */
+  position: absolute;
+  left: 10px; /* Positionne la flèche à gauche du texte */
+  top: 50%; /* Aligne verticalement la flèche au centre du texte */
+  transform: translateY(
+    -50%
+  ); /* Ajuste la flèche pour qu'elle soit bien centrée verticalement */
+  opacity: 0; /* Invisible par défaut */
+  transition: opacity 0.3s; /* Pour une transition douce */
+}
+
+.submenu ul li:hover > a::before {
+  opacity: 1; /* Montre la flèche au survol */
+}
+
+.submenu ul li a:hover {
+  color: #d6e10a;
+  background-color: #101d39;
+  border-radius: 3px;
+}
+
+.menu .logo {
+  height: 100px; /* Ajuste la hauteur selon tes besoins */
+  margin-left: -310px;
+}
+
+img {
+  height: 500px;
+  width: 1300px;
+  padding-left: 200px;
+  object-fit: contain;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  margin-top: 10px;
+}
+
+.Syp {
+  display: inline-block;
+  margin-top: 100px;
+}
+
+section > img {
+  width: 600px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+section > p {
+  margin-left: 400px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.edit > h2,
+p {
+  display: inline-block;
+  margin-top: 10px;
+}
+.edit {
+  border: 4px solid #f1f1f1;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  width: 1000px;
+  margin-left: 250px;
+  background-color: white;
+  color: #07195a;
+}
+
+.Pri {
+  margin-left: 40px;
+}
+
+.Duck {
+  color: red;
+  font-size: 34px;
+  font: 400;
+}
+
+.Consol {
+  text-decoration-line: underline;
+  padding-bottom: 10px;
+  color: rgb(0, 149, 255);
+  margin-bottom: 50px;
+}
+
+/***************************************************FOOTER******************************************************************/
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-top: auto;
+  list-style-type: none;
+  margin-top: -50px;
+}
+
+.footer-container {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.mentions,
+.contact,
+.social-media {
+  margin: 10px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.mentions {
+  position: relative;
+  text-align: center;
+}
+
+.contact27 {
+  text-align: center;
+}
+
+.social-media {
+  text-align: center;
+}
+.social-media .icons {
+  display: flex;
+  gap: 15px; /* Espace entre les icônes */
+  justify-content: center; /* Centre les icônes horizontalement */
+}
+
+.social-media .icons a {
+  color: #ffffff;
+  font-size: 24px; /* Ajuste la taille des icônes */
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.social-media .icons a:hover {
+  color: #dd4a48; /* Couleur de survol */
+}
+
+/**************************************FIN FOOTERR ********************************************/

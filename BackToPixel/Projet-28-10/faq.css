@@ -1,0 +1,269 @@
+/***************************************************BARRE MENU******************************************************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.menu {
+  background-color: #ea4d4dd1;
+  font-family: "Press Start 2P", cursive; /* Police rétro */
+  display: flex;
+  justify-content: center;
+  padding-bottom: 16px;
+  margin-top: -22px;
+  margin-left: -10px;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ajoute une ombre sous le menu */
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  padding-left: 71px;
+}
+
+.menu ul li {
+  position: relative;
+  margin: 0 15px;
+  padding-top: 40px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 15px;
+  padding-left: 35px; /* Espace pour la flèche */
+  display: block;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.menu ul li a::before {
+  content: "➤"; /* Triangle ou flèche */
+  position: absolute;
+  left: 10px; /* Ajuste pour positionner la flèche */
+  top: 50%; /* Aligne verticalement la flèche au centre du texte */
+  transform: translateY(-50%); /* Centre la flèche verticalement */
+  opacity: 0; /* Invisible par défaut */
+  transition: opacity 0.3s; /* Pour une transition douce */
+}
+
+.menu ul li:hover > a::before {
+  opacity: 1; /* Montre la flèche au survol */
+}
+
+.menu ul li a:hover {
+  color: #d6e10a;
+  background-color: #101d39;
+  border-radius: 5px;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff; /* Couleur LED blanche */
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu ul li a:hover::after {
+  transform: scaleX(1); /* La ligne s'étend sous le texte */
+}
+
+.submenu {
+  position: relative; /* Nécessaire pour le sous-menu */
+}
+
+.submenu ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: #ea4d4d66;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 999; /* Assure que le sous-menu est au-dessus des autres éléments */
+}
+
+.submenu:hover ul {
+  display: block; /* Affiche le sous-menu au survol */
+}
+
+.submenu ul li {
+  margin: 5px 0;
+}
+
+.submenu ul li a {
+  padding: 10px 20px; /* Espace pour le sous-menu */
+  position: relative; /* Nécessaire pour positionner la flèche */
+  padding-left: 30px; /* Espace pour la flèche dans le sous-menu */
+}
+
+.submenu ul li a::before {
+  content: "➤"; /* Triangle ou flèche */
+  position: absolute;
+  left: 10px; /* Positionne la flèche à gauche du texte */
+  top: 50%; /* Aligne verticalement la flèche au centre du texte */
+  transform: translateY(
+    -50%
+  ); /* Ajuste la flèche pour qu'elle soit bien centrée verticalement */
+  opacity: 0; /* Invisible par défaut */
+  transition: opacity 0.3s; /* Pour une transition douce */
+}
+
+.submenu ul li:hover > a::before {
+  opacity: 1; /* Montre la flèche au survol */
+}
+
+.submenu ul li a:hover {
+  color: #d6e10a;
+  background-color: #101d39;
+  border-radius: 3px;
+}
+
+.menu .logo {
+  height: 100px; /* Ajuste la hauteur selon tes besoins */
+  margin-right: 58px;
+  margin-top: 15px;
+}
+
+/***************************************************BODY******************************************************************/
+
+body {
+  background-color: #f4f4f4;
+  font-family: roboto, cursive;
+}
+
+.picto {
+  width: 80px;
+  margin-left: 695px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  padding-top: 200px;
+  padding-bottom: 0px;
+  text-align: center;
+  color: #333;
+  font-family: "Press Start 2P", cursive; /* Police rétro */
+}
+
+.question a {
+  color: black;
+}
+
+.faq {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px; /* Ajoute de l'espace entre les sections */
+}
+
+h2,
+summary {
+  cursor: pointer;
+  padding: 15px;
+  background: #f9f9f9;
+  font-size: 18px;
+  outline: none;
+  transition: background 0.3s ease; /* Transition douce pour le fond */
+}
+
+h2:hover,
+summary:hover {
+  background: #e0e0e0; /* Change le fond au survol */
+}
+
+details[open] h2,
+summary {
+  background: #d0d0d0; /* Change le fond quand ouvert */
+}
+
+.reponse .service {
+  padding: 15px;
+  background: #f1f1f1;
+  margin: 0; /* Supprime la marge par défaut pour <p> */
+}
+
+/***************************************************FOOTER******************************************************************/
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-top: auto;
+  margin-bottom: -10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  list-style-type: none;
+  margin-top: 200px;
+}
+
+.footer-container {
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.contact15 {
+  text-align: center;
+}
+
+.mentions,
+.contact,
+.social-media {
+  margin: 10px;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.mentions a:hover {
+  text-decoration: underline;
+}
+
+.mentions {
+  position: relative;
+  text-align: center;
+}
+
+.mentions a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact {
+  text-align: left;
+}
+
+.social-media {
+  text-align: center;
+}
+.social-media .icons {
+  display: flex;
+  gap: 15px; /* Espace entre les icônes */
+  justify-content: center; /* Centre les icônes horizontalement */
+}
+
+.social-media .icons a {
+  color: #ffffff;
+  font-size: 24px; /* Ajuste la taille des icônes */
+  transition: color 0.3s;
+  text-decoration: none;
+}
+
+.social-media .icons a:hover {
+  color: #dd4a48; /* Couleur de survol */
+}
