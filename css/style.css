@@ -25,6 +25,8 @@ body{
 }
 
 header{
+    margin-top: 0;
+    margin-bottom: 0;
     position: fixed;
     top: 1rem;
     left: 50%;
@@ -112,6 +114,8 @@ li a:hover::before{
 
 /* debut home */
 section{
+    margin-top: 0;
+    margin-bottom: 0;
     min-height: 100vh;
     padding: 10rem 12% 10rem;
 }
@@ -228,6 +232,8 @@ span{
     color: var(--text-color);
 }
 
+
+
 .text-animation{
     font-size: 34px;
     font-weight: 600;
@@ -314,12 +320,14 @@ span{
 /* debut quisuije */
 
 .quisuisje{
+    margin-top: 0;
+    margin-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2em;
     padding: 100px;  /* Espace interne réduit */
-    margin: 50px;
+    
 }
 
 .quisuisje-img img{
@@ -488,16 +496,16 @@ span{
     box-shadow: 0 0 25px var(--main-color);
 }
 .timeline-content h3{
-        overflow-wrap: break-word;
-    word-break: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word; /* Pour une meilleure compatibilité */
     font-size: 20px;
     color: var(--text-color);
     margin: 0 0 10px;
     font-weight: 500;
 }
 .timeline-content p{
-        overflow-wrap: break-word;
-    word-break: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word; /* Pour une meilleure compatibilité */
     color: var(--text-color);
     font-size: 16px;
     font-weight: 300;
@@ -752,6 +760,7 @@ header #menu-icon{
     .nav-link li{
         margin-top: 1.5rem;
         padding: 1rem;
+        font-size: 2rem;
     }
     .nav-link.active{
         display: block;
@@ -776,22 +785,21 @@ header #menu-icon{
         text-align: center;
     }
     .home-content h3{
-        font-size: 2.6rem;
+        font-size: 3rem;
     }
     .home-content h1{
-        font-size: 8rem;
-        margin-top: 3rem;
+        font-size: 4rem;
+        margin-top: 1rem;
     }
     .home-content p{
         max-width: 600px;
         margin: 0 auto;
+        font-size: 2rem;
     }
     .home-img img{
         width: 56vw;
         margin: 3rem 0;
     }
-
-
 
     .quisuisje{
         flex-direction: column-reverse;
@@ -807,16 +815,37 @@ header #menu-icon{
     }
 
     .quisuisje-box h1{
-        font-size: 8rem;
+        font-size: 4rem;
         margin-top: 3rem;
     }
     .quisuisje-box p{
         max-width: 600px;
         margin: 0 auto;
+        font-size: 14px;
     }
     .quisuisje-img img{
         width: 32vw;
         margin: 3rem 0;
     }
+    .timeline-item .timeline-content p{
+        font-size: 17px;
+    }
+    .timeline-item{
+        width: 100%;
+        padding: 15px;
+    }
+    .projets-box .projets-card p{
+        font-size: 17px;
+    }
+
+    .projets-box .projets-card a{
+        font-size: 15px;
+    }
+    .timeline-item .timeline-date{
+        color: inherit;
+        text-decoration: none;
+    }
+
+
 }
 
