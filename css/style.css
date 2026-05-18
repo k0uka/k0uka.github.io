@@ -327,7 +327,7 @@ span{
     justify-content: center;
     gap: 2em;
     padding: 100px;  /* Espace interne réduit */
-    
+
 }
 
 .quisuisje-img img{
@@ -819,9 +819,9 @@ header #menu-icon{
         margin-top: 3rem;
     }
     .quisuisje-box p{
-        max-width: 600px;
+        max-width:600px;
+        font-size: 16px;
         margin: 0 auto;
-        font-size: 14px;
     }
     .quisuisje-img img{
         width: 32vw;
@@ -830,10 +830,47 @@ header #menu-icon{
     .timeline-item .timeline-content p{
         font-size: 17px;
     }
-    .timeline-item{
-        width: 100%;
-        padding: 15px;
+    .timeline-item:nth-child(odd) {
+        padding-right: calc(50% + 10px) !important;
+        text-align: right;
     }
+    .timeline-item:nth-child(even) {
+        padding-left: calc(50% + 10px) !important;
+        text-align: left;
+    }
+
+    .timeline-content {
+        width: 165px !important;
+        max-width: 170px !important;
+        min-width: 150px !important;
+
+        padding: 15px !important;
+        border-radius: 1.5rem !important;
+        display: inline-block !important;
+
+    }
+
+
+
+    .timeline-dot {
+        position: absolute !important;
+        left: calc(50% - 10.5px) !important; /* Aligne pile sur la ligne de 5px */
+
+        width: 21px !important;
+        height: 21px !important;
+        min-width: 21px !important;
+        min-height: 21px !important;
+        max-width: 21px !important;
+        max-height: 21px !important;
+    }
+
+
+    .timeline-date {
+    font-size: 14px !important;
+    margin: 5px 0 10px !important;
+}
+
+
     .projets-box .projets-card p{
         font-size: 17px;
     }
