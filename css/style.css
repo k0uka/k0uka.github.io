@@ -773,6 +773,8 @@ header #menu-icon{
         font-size: 1.5rem;
     }
     .home{
+        height: auto !important;
+        min-height: fit-content !important;
         flex-direction: column-reverse;
         margin: 5rem 4rem;
         gap: 3rem;
@@ -802,11 +804,14 @@ header #menu-icon{
     }
 
     .quisuisje{
+        height: auto !important;
+        min-height: fit-content !important;
         flex-direction: column-reverse;
         margin: 5rem 4rem;
         gap: 3rem;
     }
     .quisuisje-box{
+
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -820,7 +825,7 @@ header #menu-icon{
     }
     .quisuisje-box p{
         max-width:600px;
-        font-size: 16px;
+        font-size: 17px;
         margin: 0 auto;
     }
     .quisuisje-img img{
@@ -882,7 +887,22 @@ header #menu-icon{
         color: inherit;
         text-decoration: none;
     }
+    .quisuisje-box .btni{
+        font-size: 14px;
+    }
+    .projets-card {
+        width: 300px;
+    }
 
+    .contact{
+        height: auto !important;
+        min-height: fit-content !important;
+        padding-bottom: 90px;
+    }
+    .parcours{
+        height: auto !important;
+        min-height: fit-content !important;
+    }
 
 }
 
